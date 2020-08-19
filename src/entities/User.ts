@@ -1,5 +1,4 @@
-import {IgnoreProperty} from "@tsed/common";
-import {Description} from "@tsed/swagger";
+import {Ignore, Description} from "@tsed/common";
 import {Entity, PrimaryGeneratedColumn} from "typeorm";
 import {UserCreation} from "../models/UserCreation";
 
@@ -9,7 +8,7 @@ export class User extends UserCreation {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @IgnoreProperty()
+  @Ignore()
   password: string;
 
   verifyPassword(password: string) {
