@@ -21,11 +21,13 @@ COPY package.json .
 COPY yarn.lock .
 COPY ./src ./src
 COPY ./dist ./dist
+COPY ./resources ./resources
+COPY ./spec ./spec
 
 RUN yarn install --production
 
-EXPOSE 8083
-ENV PORT 8083
+EXPOSE 8081
+ENV PORT 8081
 ENV NODE_ENV production
 
 CMD ["yarn", "start:prod"]
