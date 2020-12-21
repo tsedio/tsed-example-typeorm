@@ -1,8 +1,8 @@
-import {BodyParams, Req} from "@tsed/common";
-import {OnInstall, OnVerify, Protocol} from "@tsed/passport";
-import {Strategy} from "passport-local";
+import {BodyParams, Inject} from "@tsed/common";
 import {Forbidden} from "@tsed/exceptions";
-import {UserCreation} from "../models/UserCreation";
+import {OnVerify, Protocol} from "@tsed/passport";
+import {Strategy} from "passport-local";
+import {User} from "../entities/User";
 import {UserRepository} from "../repositories/UserRepository";
 
 @Protocol({
@@ -13,11 +13,11 @@ import {UserRepository} from "../repositories/UserRepository";
     passwordField: "password"
   }
 })
-export class SignupLocalProtocol implements OnVerify, OnInstall {
-  constructor(private userRepository: UserRepository) {
-  }
+export class SignupLocalProtocol implements OnVerify {
+  @Inject()
+  private userRepository: UserRepository;
 
-  async $onVerify(@BodyParams() user: UserCreation) {
+  async $onVerify(@BodyParams() user: User): Promise<User> {
     const {email} = user;
     const found = await this.userRepository.findOne({email});
 
@@ -26,9 +26,5 @@ export class SignupLocalProtocol implements OnVerify, OnInstall {
     }
 
     return this.userRepository.create(user);
-  }
-
-  $onInstall(strategy: Strategy): void {
-    // intercept the strategy instance to adding extra configuration
   }
 }
