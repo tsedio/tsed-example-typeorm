@@ -2,6 +2,7 @@
 // https://jestjs.io/docs/en/configuration.html
 
 module.exports = {
+  rootDir: __dirname,
   // Automatically clear mock calls and instances between every test
   clearMocks: true,
 
@@ -39,8 +40,8 @@ module.exports = {
 
   // The glob patterns Jest uses to detect test files
   testMatch: [
-    '**/src/**/__tests__/**/*.[jt]s?(x)',
-    '**/src/**/?(*.)+(spec|test).[tj]s?(x)'
+    '<rootDir>/src/**/__tests__/**/*.[jt]s?(x)',
+    '<rootDir>/src/**/?(*.)+(spec|test).[tj]s?(x)'
   ],
   // A map from regular expressions to paths to transformers
   transform: {
