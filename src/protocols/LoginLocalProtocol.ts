@@ -1,7 +1,9 @@
-import {BodyParams, Req} from "@tsed/common";
-import {OnInstall, OnVerify, Protocol} from "@tsed/passport";
+import {BodyParams, Constant, Inject} from "@tsed/common";
+import {OnVerify, Protocol} from "@tsed/passport";
+import {Groups} from "@tsed/schema";
+import * as jwt from "jsonwebtoken";
 import {IStrategyOptions, Strategy} from "passport-local";
-import {Credentials} from "../models/Credentials";
+import {User} from "../entities/User";
 import {UserRepository} from "../repositories/UserRepository";
 
 @Protocol<IStrategyOptions>({
@@ -12,13 +14,15 @@ import {UserRepository} from "../repositories/UserRepository";
     passwordField: "password"
   }
 })
-export class LoginLocalProtocol implements OnVerify, OnInstall {
-  constructor(private userRepository: UserRepository) {
-  }
+export class LoginLocalProtocol implements OnVerify {
+  @Constant("passport.protocols.jwt.settings")
+  jwtSettings: Record<string, string | number>;
 
-  async $onVerify(@BodyParams() credentials: Credentials) {
+  @Inject()
+  private userRepository: UserRepository;
+
+  async $onVerify(@BodyParams() @Groups("credentials") credentials: User): Promise<boolean | string> {
     const {email, password} = credentials;
-
     const user = await this.userRepository.findOne({email});
 
     if (!user) {
@@ -31,10 +35,22 @@ export class LoginLocalProtocol implements OnVerify, OnInstall {
       // OR throw new NotAuthorized("Wrong credentials")
     }
 
-    return user;
+    return this.createJwt(user);
   }
 
-  $onInstall(strategy: Strategy): void {
-    // intercept the strategy instance to adding extra configuration
+  createJwt(user: User): string {
+    const {issuer, audience, secretOrKey, maxAge = 3600} = this.jwtSettings;
+    const now = Date.now();
+
+    return jwt.sign(
+      {
+        iss: issuer,
+        aud: audience,
+        sub: user.id,
+        exp: now + (maxAge as number) * 1000,
+        iat: now
+      },
+      secretOrKey as string
+    );
   }
 }

@@ -1,23 +1,24 @@
-import {BodyParams, Req} from "@tsed/common";
-import {OnInstall, OnVerify, Protocol} from "@tsed/passport";
-import {Strategy} from "passport";
+import {BodyParams, Inject, Req} from "@tsed/common";
+import {OnVerify, Protocol} from "@tsed/passport";
+import {Email} from "@tsed/schema";
 import {BasicStrategy} from "passport-http";
+import {User} from "../entities/User";
 import {UserRepository} from "../repositories/UserRepository";
-import {checkEmail} from "../utils/checkEmail";
 
 @Protocol({
   name: "basic",
-  // @ts-ignore
   useStrategy: BasicStrategy,
   settings: {}
 })
-export class BasicProtocol implements OnVerify, OnInstall {
-  constructor(private userRepository: UserRepository) {
-  }
+export class BasicProtocol implements OnVerify {
+  @Inject()
+  private userRepository: UserRepository;
 
-  async $onVerify(@Req() request: Req, @BodyParams("username") username: string, @BodyParams("password") password: string) {
-    checkEmail(username);
-
+  async $onVerify(
+    @Req() request: Req,
+    @BodyParams("username") @Email() username: string,
+    @BodyParams("password") password: string
+  ): Promise<User | boolean> {
     const user = await this.userRepository.findOne({email: username});
 
     if (!user) {
@@ -29,9 +30,5 @@ export class BasicProtocol implements OnVerify, OnInstall {
     }
 
     return user;
-  }
-
-  $onInstall(strategy: Strategy): void {
-    // intercept the strategy instance to adding extra configuration
   }
 }
