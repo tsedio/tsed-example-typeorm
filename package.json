@@ -54,7 +54,7 @@
   "devDependencies": {
     "@tsed/cli-plugin-eslint": "2.7.2",
     "@tsed/cli-plugin-jest": "2.7.2",
-    "@tsed/cli-plugin-passport": "2.7.2",
+    "@tsed/cli-plugin-passport": "2.8.1",
     "@tsed/cli-plugin-typeorm": "2.7.2",
     "@types/chai": "4.2.12",
     "@types/chai-as-promised": "7.1.3",
