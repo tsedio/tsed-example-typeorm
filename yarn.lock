@@ -723,10 +723,10 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@tsed/ajv@6.23.3":
-  version "6.23.3"
-  resolved "https://registry.yarnpkg.com/@tsed/ajv/-/ajv-6.23.3.tgz#50eb281bafbdff131f437ee7a24539c6d85224d5"
-  integrity sha512-Od/vKQGVy8lJ3tPBVcR+XfROmpJrh0dkXOrCF5QfJ3uYn6vXkmVIaLKeMDVkxX8Aq5xfADUffYT4PSTEqfEXxQ==
+"@tsed/ajv@6.23.4":
+  version "6.23.4"
+  resolved "https://registry.yarnpkg.com/@tsed/ajv/-/ajv-6.23.4.tgz#f89614a21e5989595594a8658ecfb37b4dfe854c"
+  integrity sha512-D0LT1UHs7qp5O1Flq9OS/mx/4MHqRHk4VO/jFBVDRZHwAB8dCekTxehF0dsTZhfge4Bx64Bx4HVng2l+7+pxww==
   dependencies:
     ajv-formats "1.5.1"
     tslib "2.0.1"
@@ -761,17 +761,17 @@
     change-case "4.1.1"
     tslib "2.0.3"
 
-"@tsed/common@6.23.3":
-  version "6.23.3"
-  resolved "https://registry.yarnpkg.com/@tsed/common/-/common-6.23.3.tgz#1a0e01a2b9eb2ea5d02d6b1ca0bffbfead452784"
-  integrity sha512-8D1CdVfL3rytqauejK4ixSHxlIH89ou8gSM+sYr+VKlu6x6YmDRnl77dB10QocwyAFztAj+xkg379AxZAvyemw==
+"@tsed/common@6.23.4":
+  version "6.23.4"
+  resolved "https://registry.yarnpkg.com/@tsed/common/-/common-6.23.4.tgz#22ac7ed9e702517c1351d777c108651cb6402611"
+  integrity sha512-AZz0744esqLDmk2WqxAPAT6HVUI7IGUQJsLASfKNnmS6QWTg1NlOZsGOejBHKNLCUOTbllg9nH6qAXZwEnb6pQ==
   dependencies:
-    "@tsed/core" "6.23.3"
-    "@tsed/di" "6.23.3"
-    "@tsed/exceptions" "6.23.3"
-    "@tsed/json-mapper" "6.23.3"
+    "@tsed/core" "6.23.4"
+    "@tsed/di" "6.23.4"
+    "@tsed/exceptions" "6.23.4"
+    "@tsed/json-mapper" "6.23.4"
     "@tsed/logger" "^5.5.4"
-    "@tsed/schema" "6.23.3"
+    "@tsed/schema" "6.23.4"
     "@types/json-schema" "7.0.6"
     consolidate "^0.16.0"
     ejs "^3.1.5"
@@ -782,38 +782,38 @@
     tslib "2.0.1"
     uuid "8.3.2"
 
-"@tsed/core@6.23.3":
-  version "6.23.3"
-  resolved "https://registry.yarnpkg.com/@tsed/core/-/core-6.23.3.tgz#781ea07b127faf7585d43ecbd163af80edaa891e"
-  integrity sha512-jt53ZRR5KSDaqUHcoIKJDpSae7xV8HscTvt+avrIIrycA22eEinNTSoc8OF8mlzLa/SUPc8bMkKlEhn1J+JspQ==
+"@tsed/core@6.23.4":
+  version "6.23.4"
+  resolved "https://registry.yarnpkg.com/@tsed/core/-/core-6.23.4.tgz#26c03c5cb9bbc94d5a08be6f7c350291b0b62d6f"
+  integrity sha512-b0eJfmHEBqbG+hYzk24qjncS6uUwlcDuimjYNEHjXG86mY/sun7plWerrQZ6oHoZDt9+BzyS3gQR+Byw1UVJ8A==
   dependencies:
     reflect-metadata "^0.1.13"
     source-map-support "0.5.19"
     tslib "2.0.1"
 
-"@tsed/di@6.23.3":
-  version "6.23.3"
-  resolved "https://registry.yarnpkg.com/@tsed/di/-/di-6.23.3.tgz#725e9d09d0cd2f3177e8ec29533a9f94946ad35d"
-  integrity sha512-222gEGHFOnMPMIFNd8g47s+/BMRKT5bdNyR6zXnUotqTu6jxewrIh8qL36syZezji3gyH/Q2ztra3I+tVbf23g==
+"@tsed/di@6.23.4":
+  version "6.23.4"
+  resolved "https://registry.yarnpkg.com/@tsed/di/-/di-6.23.4.tgz#b1bba85dc9904010fd619c30cefcadccd85cbb7b"
+  integrity sha512-LT4oyQxO9Qgw3qDbYed8UiU54NKYkCa0hyW39ZDwiVhCxn2wBbKr9cCTIJSudnrLRdoFOLx2w51tcXT1YPAZMg==
   dependencies:
-    "@tsed/core" "6.23.3"
+    "@tsed/core" "6.23.4"
     chalk "4.1.0"
     tslib "2.0.1"
 
-"@tsed/exceptions@6.23.3":
-  version "6.23.3"
-  resolved "https://registry.yarnpkg.com/@tsed/exceptions/-/exceptions-6.23.3.tgz#bbcd04ac30fd7c53867c5d44989174613d3bb8c9"
-  integrity sha512-VHt+17MzfEklUy76tk8pgzGwe50Q70puEptK6DPmIw1NzXGGMPfL0Hcp0QyPQh5Iw1QsmxqCIZ2WKRKOF6BZZQ==
+"@tsed/exceptions@6.23.4":
+  version "6.23.4"
+  resolved "https://registry.yarnpkg.com/@tsed/exceptions/-/exceptions-6.23.4.tgz#050c8b8ace7542eb455ea6f6b37c21bd32bbec90"
+  integrity sha512-oo+50sGM33NCNd0eBO6anqVj5DrPwKCiXWCEuQKV3QlsbWhbHtAKlSmiiB7jx0CyqX3khFWAdnqZgxZD/EE/Sw==
   dependencies:
-    "@tsed/schema" "6.23.3"
+    "@tsed/schema" "6.23.4"
     tslib "2.0.1"
 
-"@tsed/json-mapper@6.23.3":
-  version "6.23.3"
-  resolved "https://registry.yarnpkg.com/@tsed/json-mapper/-/json-mapper-6.23.3.tgz#80363c81ba33c45c08246ab2d2ba037412aa429c"
-  integrity sha512-WQLVALyTs5Jkxx++jERtHay5NzOTMeyk8vA+XJjCRt+kNdHSc+LrMl5kIJ1hCb863pTQECPkue5sOqIlQ4XReg==
+"@tsed/json-mapper@6.23.4":
+  version "6.23.4"
+  resolved "https://registry.yarnpkg.com/@tsed/json-mapper/-/json-mapper-6.23.4.tgz#16e440e0070fa02ea3f705d530042218260945e0"
+  integrity sha512-HL8R0bvKm3JLEcP4ARsDPrJZgwfzNG1Ubije2P/ga23qjwL/j3dQ4BcmbfByG8zDBf2mgxXD8Ns15Zj+0wCXNA==
   dependencies:
-    "@tsed/core" "6.23.3"
+    "@tsed/core" "6.23.4"
     tslib "2.0.1"
 
 "@tsed/logger@^5.5.4":
@@ -827,49 +827,49 @@
     streamroller "^1.0.3"
     tslib "2.0.3"
 
-"@tsed/openspec@6.23.3":
-  version "6.23.3"
-  resolved "https://registry.yarnpkg.com/@tsed/openspec/-/openspec-6.23.3.tgz#fe2f5530c38758ae072280e44af6b3e650ca03c7"
-  integrity sha512-DnjXkYbwO8ey5Roy0go0dSj/AcpLWhXpBDfAR2Hg3/i22Q+b+zLJTz6DZaAXBYCIhatL6+a+3iqyVcYRal3nUQ==
+"@tsed/openspec@6.23.4":
+  version "6.23.4"
+  resolved "https://registry.yarnpkg.com/@tsed/openspec/-/openspec-6.23.4.tgz#43c6e602d7df57eb1d11718f2c459d4f3021cabc"
+  integrity sha512-UajIgBnPyUMnnFWRbLUwjWdr6q5DGNEq2NtmJip+uPhfEy/2WfkdPEcFSZ67JblkP7iYOa5PsrMBXPYvczZeXA==
 
-"@tsed/passport@6.23.3":
-  version "6.23.3"
-  resolved "https://registry.yarnpkg.com/@tsed/passport/-/passport-6.23.3.tgz#a617e9cfed4aa650d30a03002785ba4ed47dcbcc"
-  integrity sha512-PUg6moRTHAS9igpw5y1EI+QR2S0ZWi75giChmNJsgupwfxZer+sWodHvG+dtg5AGul0P0lCSmUGtTKHaUN8vCg==
+"@tsed/passport@6.23.4":
+  version "6.23.4"
+  resolved "https://registry.yarnpkg.com/@tsed/passport/-/passport-6.23.4.tgz#dc49bb5c56201995cd3f9a78395149f6e73ac23a"
+  integrity sha512-N+g/lcPXvYwo3tqVzBcj7rdWSBAop40lPHzWZtGsL1A3Nh5QN7TJYHVwZf89ZdgzYK0g/9L9Jh8aCEeHzU630w==
   dependencies:
     tslib "2.0.1"
 
-"@tsed/platform-express@6.23.3":
-  version "6.23.3"
-  resolved "https://registry.yarnpkg.com/@tsed/platform-express/-/platform-express-6.23.3.tgz#ab6a9b096ea36911d4adb858dd389522e066e2f6"
-  integrity sha512-QdWya9lqrrbfFSL3hu511P2UknUG9hwQv44uZGbZS4SqFteMZ7SYUpeQMF3Kx9qgEJSDRr0HDvH5ij9PRiSlqw==
+"@tsed/platform-express@6.23.4":
+  version "6.23.4"
+  resolved "https://registry.yarnpkg.com/@tsed/platform-express/-/platform-express-6.23.4.tgz#89f592ae2d87c0b29b58b151534eaa8cb9538207"
+  integrity sha512-bjg5xJDHgAC1oT0cqrXzPUINqDDFaQ+JiWHEBSu3P4VyywQAsFyviMIHYwtbWlHNRuZyh+TvnialuiCnwanVpA==
   dependencies:
     express "^4.17.1"
     multer "^1.4.2"
 
-"@tsed/schema@6.23.3":
-  version "6.23.3"
-  resolved "https://registry.yarnpkg.com/@tsed/schema/-/schema-6.23.3.tgz#296b51c3c8924ae32419c42609a9a839e1da7492"
-  integrity sha512-6O+nkuPdZWqg7jN7/IKmwOXonWOt80gc3mZNWTfGxMOrFJcagX/cyTp06sRHixcIZKmNdQ6sa9BTZZs4TLSDtA==
+"@tsed/schema@6.23.4":
+  version "6.23.4"
+  resolved "https://registry.yarnpkg.com/@tsed/schema/-/schema-6.23.4.tgz#48edd4e835781ae9ea10c5eb00a810746cbf26bf"
+  integrity sha512-/YPW0kF4jNKOLRM0ImYxpS//PtTcq3rXxkypRFE20Y2vlbw8fB8z4Xlsf9iJtOAfZJjgla3GRJeEtNB7GjGiOw==
   dependencies:
-    "@tsed/core" "6.23.3"
-    "@tsed/openspec" "6.23.3"
+    "@tsed/core" "6.23.4"
+    "@tsed/openspec" "6.23.4"
     change-case "4.1.1"
     micromatch "4.0.2"
     tslib "2.0.1"
 
-"@tsed/swagger@6.23.3":
-  version "6.23.3"
-  resolved "https://registry.yarnpkg.com/@tsed/swagger/-/swagger-6.23.3.tgz#87ad7ce852a60323280cdd2dfa3dfe94f95ab807"
-  integrity sha512-hGXPQ6yKMfplZEx8hRNH0KpU1z9aTdKjkIC3uduwJ0CP2WPG6DBR/ylsOmRqp2ILXimQ7sd0SJ/Kefm4N1Fxzg==
+"@tsed/swagger@6.23.4":
+  version "6.23.4"
+  resolved "https://registry.yarnpkg.com/@tsed/swagger/-/swagger-6.23.4.tgz#2b0c206299163fc410df9aa1a5579c156cf1dc1f"
+  integrity sha512-gD22TeoIMv5/XiTyXvo0ptwVd+Vov5fP01yzv3cKtuDODZuNDLcIZwDT7y5rD/aS5ODYCk7Rf6VGHY+BY2sC+w==
   dependencies:
     swagger-ui-dist "^3.31.1"
     tslib "2.0.1"
 
-"@tsed/typeorm@6.23.3":
-  version "6.23.3"
-  resolved "https://registry.yarnpkg.com/@tsed/typeorm/-/typeorm-6.23.3.tgz#56301ea4905984ce0122cc69da5054b20672aec4"
-  integrity sha512-t21xP8HsjU2OEhLiUl/s5MgGO4KB+e6J20KV2aI8obIPqtKfy15eLbpWlAGvdy21Bpru6zknsXsoQ0WiSH+XOA==
+"@tsed/typeorm@6.23.4":
+  version "6.23.4"
+  resolved "https://registry.yarnpkg.com/@tsed/typeorm/-/typeorm-6.23.4.tgz#62529658647644565b73480957e5332598018838"
+  integrity sha512-LaEUIuNPS7zwm9bk5dcGzgq5RJGy/0luZMmF4ooE14hwdavJISVCt6jBHD3kPkfF+c7jKjwQXPWMkLFzZWRm0g==
   dependencies:
     tslib "2.0.1"
 
