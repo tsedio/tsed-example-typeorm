@@ -753,13 +753,13 @@
     change-case "^4.1.1"
     tslib "2.0.3"
 
-"@tsed/cli-plugin-typeorm@2.7.2":
-  version "2.7.2"
-  resolved "https://registry.yarnpkg.com/@tsed/cli-plugin-typeorm/-/cli-plugin-typeorm-2.7.2.tgz#1be23036b065c18a7788b23cd31e2050324a3d80"
-  integrity sha512-4FsNrGtJoxQ42IZ9d5zitAgtchF8v+eeJQoQX0Lhq80MXQXVl6az7HEi5QW3Rtt+XfWOPLa+oeASBHtX4ec8og==
+"@tsed/cli-plugin-typeorm@2.9.0":
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/@tsed/cli-plugin-typeorm/-/cli-plugin-typeorm-2.9.0.tgz#635f87688058b134d51b5a076105064bc1ab82e9"
+  integrity sha512-QugV0JIRuqUDC2fC4RArr7U3xNX9DaKrNshPUSlGdCpyqD1Ieu91oYHIabyzG4GNMwYsK3SUC2KJzsAgT3Odbg==
   dependencies:
-    change-case "4.1.1"
-    tslib "2.0.3"
+    change-case "4.1.2"
+    tslib "2.1.0"
 
 "@tsed/common@6.23.4":
   version "6.23.4"
@@ -1937,7 +1937,7 @@ change-case@4.1.1:
     snake-case "^3.0.3"
     tslib "^1.10.0"
 
-change-case@^4.1.1:
+change-case@4.1.2, change-case@^4.1.1:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/change-case/-/change-case-4.1.2.tgz#fedfc5f136045e2398c0410ee441f95704641e12"
   integrity sha512-bSxY2ws9OtviILG1EiY5K7NNxkqg/JnRnFxLtKQ96JaviiIxi7djMrSd0ECT9AC+lttClmYwKw53BWpOMblo7A==
@@ -7106,27 +7106,17 @@ tslib@2.0.1:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.1.tgz#410eb0d113e5b6356490eec749603725b021b43e"
   integrity sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==
 
-tslib@2.0.3, tslib@^2.0.3:
+tslib@2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.3.tgz#8e0741ac45fc0c226e58a17bfc3e64b9bc6ca61c"
   integrity sha512-uZtkfKblCEQtZKBF6EBXVZeQNl82yqtDQdv+eck8u7tdPxjLu2/lp5/uPW+um2tpuxINHWy3GhiccY7QgEaVHQ==
 
-tslib@^1.10.0:
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.1.tgz#eb15d128827fbee2841549e171f45ed338ac7e35"
-  integrity sha512-aZW88SY8kQbU7gpV19lN24LtXh/yD4ZZg6qieAJDDg+YBsJcSmLGK9QpnUjAKVG/xefmvJGd1WUmfpT/g6AJGA==
+tslib@2.1.0, tslib@^2.0.3:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.1.0.tgz#da60860f1c2ecaa5703ab7d39bc05b6bf988b97a"
+  integrity sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
 
-tslib@^1.13.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
-  integrity sha512-i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q==
-
-tslib@^1.8.1:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
-  integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
-
-tslib@^1.9.0:
+tslib@^1.10.0, tslib@^1.13.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
