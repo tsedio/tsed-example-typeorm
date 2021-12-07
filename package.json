@@ -60,7 +60,7 @@
     "@types/jest": "26.0.20",
     "@types/method-override": "^0.0.31",
     "@types/multer": "1.4.5",
-    "@types/node": "14.14.34",
+    "@types/node": "16.11.12",
     "@types/passport": "^1.0.4",
     "@types/passport-http": "0.3.8",
     "@types/passport-jwt": "3.0.3",
