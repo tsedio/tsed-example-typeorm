@@ -2,7 +2,6 @@
 // https://jestjs.io/docs/en/configuration.html
 
 module.exports = {
-  rootDir: __dirname,
   // Automatically clear mock calls and instances between every test
   clearMocks: true,
 
@@ -23,6 +22,12 @@ module.exports = {
 
   // An object that configures minimum threshold enforcement for coverage results
   coverageThreshold: {
+    global: {
+      'branches': 70,
+      'functions': 70,
+      'lines': 70,
+      'statements': 70
+    }
   },
 
   // An array of file extensions your modules use
@@ -40,8 +45,8 @@ module.exports = {
 
   // The glob patterns Jest uses to detect test files
   testMatch: [
-    '<rootDir>/src/**/__tests__/**/*.[jt]s?(x)',
-    '<rootDir>/src/**/?(*.)+(spec|test).[tj]s?(x)'
+    '**/src/**/__tests__/**/*.[jt]s?(x)',
+    '**/src/**/?(*.)+(spec|test).[tj]s?(x)'
   ],
   // A map from regular expressions to paths to transformers
   transform: {

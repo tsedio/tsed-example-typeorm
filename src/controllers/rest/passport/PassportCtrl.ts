@@ -16,7 +16,7 @@ const JwtSchema = object()
 @Name("Auth")
 export class PassportCtrl {
   @Post("/login")
-  @Authenticate("login", {failWithError: false})
+  @Authenticate("login", {failWithError: false} as any)
   @(Returns(200).ContentType("application/json").Schema(JwtSchema))
   @(Returns(400).Description("Validation error"))
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -46,7 +46,7 @@ export class PassportCtrl {
   }
 
   @Get("/logout")
-  logout(@Req() req: Express.Request): void {
+  logout(@Req() req: Req): void {
     req.logout();
   }
 

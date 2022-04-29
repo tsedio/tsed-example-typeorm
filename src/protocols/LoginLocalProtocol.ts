@@ -1,10 +1,10 @@
 import {BodyParams, Constant, Inject} from "@tsed/common";
 import {OnVerify, Protocol} from "@tsed/passport";
 import {Groups} from "@tsed/schema";
-import * as jwt from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 import {IStrategyOptions, Strategy} from "passport-local";
 import {User} from "../entities/User";
-import {UserRepository} from "../repositories/UserRepository";
+import {USER_REPOSITORY} from "../repositories/UserRepository";
 
 @Protocol<IStrategyOptions>({
   name: "login",
@@ -18,12 +18,12 @@ export class LoginLocalProtocol implements OnVerify {
   @Constant("passport.protocols.jwt.settings")
   jwtSettings: Record<string, string | number>;
 
-  @Inject()
-  private userRepository: UserRepository;
+  @Inject(USER_REPOSITORY)
+  protected repository: USER_REPOSITORY;
 
   async $onVerify(@BodyParams() @Groups("credentials") credentials: User): Promise<boolean | string> {
     const {email, password} = credentials;
-    const user = await this.userRepository.findOne({email});
+    const user = await this.repository.findOneBy({email});
 
     if (!user) {
       return false;

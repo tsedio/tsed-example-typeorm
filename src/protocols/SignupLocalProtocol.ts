@@ -3,7 +3,7 @@ import {Forbidden} from "@tsed/exceptions";
 import {OnVerify, Protocol} from "@tsed/passport";
 import {Strategy} from "passport-local";
 import {User} from "../entities/User";
-import {UserRepository} from "../repositories/UserRepository";
+import {USER_REPOSITORY} from "../repositories/UserRepository";
 
 @Protocol({
   name: "signup",
@@ -14,17 +14,17 @@ import {UserRepository} from "../repositories/UserRepository";
   }
 })
 export class SignupLocalProtocol implements OnVerify {
-  @Inject()
-  private userRepository: UserRepository;
+  @Inject(USER_REPOSITORY)
+  protected repository: USER_REPOSITORY;
 
   async $onVerify(@BodyParams() user: User): Promise<User> {
     const {email} = user;
-    const found = await this.userRepository.findOne({email});
+    const found = await this.repository.findOneBy({email});
 
     if (found) {
       throw new Forbidden("Email is already registered");
     }
 
-    return this.userRepository.create(user);
+    return this.repository.create(user);
   }
 }

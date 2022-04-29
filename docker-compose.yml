@@ -8,16 +8,17 @@ services:
         - http_proxy
         - https_proxy
         - no_proxy
-    image: 'tsed-example-typeorm/server:latest'
+    image: tsed-cli-test/server:latest
     ports:
       - '8081:8081'
     stdin_open: true
     tty: true
-  postgres:
-    image: 'postgres:9.6.1'
+  mysql:
+    image: mysql:8.0.28-oracle
     ports:
-      - '5432:5432'
+      - '3306:3306'
     environment:
-      POSTGRES_USER: test
-      POSTGRES_PASSWORD: test
-      POSTGRES_DB: test
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+      MYSQL_DATABASE: test

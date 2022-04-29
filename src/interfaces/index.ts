@@ -6,6 +6,7 @@ declare global {
   namespace TsED {
     interface Request extends Express.Request {
       user: User;
+      logout(): void;
     }
   }
 }

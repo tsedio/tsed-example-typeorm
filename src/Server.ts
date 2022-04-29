@@ -1,85 +1,62 @@
-import "@tsed/ajv";
-import {InjectorService, PlatformApplication} from "@tsed/common";
-import {Configuration, Inject} from "@tsed/di";
-import {deserialize} from "@tsed/json-mapper";
+import {join} from "path";
+import {Configuration, Inject, InjectorService} from "@tsed/di";
+import {PlatformApplication} from "@tsed/common";
 import "@tsed/platform-express"; // /!\ keep this import
-import "@tsed/typeorm";
 import bodyParser from "body-parser";
 import compress from "compression";
 import cookieParser from "cookie-parser";
-import cors from "cors";
 import methodOverride from "method-override";
-import typeormConfig from "./config/typeorm";
-import {IndexCtrl} from "./controllers/pages/IndexCtrl";
-import {User} from "./entities/User";
-import {UserRepository} from "./repositories/UserRepository";
-
-export const rootDir = __dirname;
+import cors from "cors";
+import "@tsed/ajv";
+import "@tsed/swagger";
+import {config} from "./config";
+import * as rest from "./controllers/rest";
+import * as pages from "./controllers/pages";
+import "./protocols"
+import {DataSource} from "typeorm";
+import {USER_REPOSITORY} from "./repositories/UserRepository";
+import {deserialize} from "@tsed/json-mapper";
+import { User } from "./entities/User";
 
 @Configuration({
-  rootDir,
+  ...config,
   acceptMimes: ["application/json"],
   httpPort: process.env.PORT || 8083,
   httpsPort: false, // CHANGE
+  componentsScan: false,
   mount: {
-    "/rest": [`${rootDir}/controllers/**/*.ts`],
-    "/": [IndexCtrl]
+    "/rest": [
+      ...Object.values(rest)
+    ],
+    "/": [
+      ...Object.values(pages)
+    ]
   },
-  passport: {
-    userInfoModel: User
-  },
-  componentsScan: [`${rootDir}/protocols/**/*.ts`],
-  swagger: [
-    {
-      path: "/api-docs",
-      specVersion: "3.0.1",
-      spec: {
-        components: {
-          securitySchemes: {
-            bearerAuth: {
-              type: "http",
-              scheme: "bearer",
-              bearerFormat: "JWT",
-              description: "Call POST /rest/auth/login to get the access token"
-            }
-          }
-        }
-      }
-    }
+  middlewares: [
+    cors(),
+    cookieParser(),
+    compress({}),
+    methodOverride(),
+    bodyParser.json(),
+    bodyParser.urlencoded({
+      extended: true
+    })
   ],
-  typeorm: typeormConfig,
   views: {
-    root: `${rootDir}/../views`,
-    viewEngine: "ejs"
-  },
-  exclude: ["**/*.spec.ts"]
+    root: join(process.cwd(), "../views"),
+    extensions: {
+      ejs: "ejs"
+    }
+  }
 })
 export class Server {
   @Inject()
-  app: PlatformApplication;
+  protected injector: InjectorService;
 
-  @Configuration()
-  settings: Configuration;
-
-  @Inject()
-  injector: InjectorService;
-
-  $beforeRoutesInit(): void {
-    this.app
-      .use(cors())
-      .use(cookieParser())
-      .use(compress({}))
-      .use(methodOverride())
-      .use(bodyParser.json())
-      .use(
-        bodyParser.urlencoded({
-          extended: true
-        })
-      );
-  }
 
   async $onReady(): Promise<void> {
-    const repository = this.injector.get<UserRepository>(UserRepository)!;
+    const repository = this.injector.get<USER_REPOSITORY>(USER_REPOSITORY)!;
+
     const count = await repository.count();
 
     if (!count) {
