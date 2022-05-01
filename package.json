@@ -68,7 +68,7 @@
     "@types/jest": "^27.4.1",
     "@types/method-override": "^0.0.32",
     "@types/multer": "^1.4.7",
-    "@types/node": "^17.0.30",
+    "@types/node": "^17.0.31",
     "@types/passport": "^1.0.7",
     "@types/passport-http": "^0.3.9",
     "@types/passport-jwt": "^3.0.6",
