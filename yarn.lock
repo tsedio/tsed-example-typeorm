@@ -818,10 +818,17 @@
   dependencies:
     tslib "2.3.1"
 
-"@tsed/platform-middlewares@6.114.2", "@tsed/platform-middlewares@^6.114.2":
+"@tsed/platform-middlewares@6.114.2":
   version "6.114.2"
   resolved "https://registry.npmjs.org/@tsed/platform-middlewares/-/platform-middlewares-6.114.2.tgz"
   integrity sha512-YxbqZYGKO3YElw7bS/omLQ24cpsgMSVy214U23l+H8NPWlZS2Tel5Rd0VEELVbXHuk81TeGbGmYYFOmVIc52SQ==
+  dependencies:
+    tslib "2.3.1"
+
+"@tsed/platform-middlewares@^6.114.3":
+  version "6.114.3"
+  resolved "https://registry.yarnpkg.com/@tsed/platform-middlewares/-/platform-middlewares-6.114.3.tgz#90a14236ba3dd2fea90a49eaae11845c6b1d53de"
+  integrity sha512-wezbCSFQ0hsg7ZXVbvxBCi8/EHjVDCYyX7SkQJ4CSPZjXnIziNNbFRxNQKqEsydLIMysmn96awBuHTAQPc/LBw==
   dependencies:
     tslib "2.3.1"
 
