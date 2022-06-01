@@ -722,10 +722,10 @@
   dependencies:
     tslib "2.3.1"
 
-"@tsed/engines@^6.114.2":
-  version "6.114.2"
-  resolved "https://registry.npmjs.org/@tsed/engines/-/engines-6.114.2.tgz"
-  integrity sha512-s4lr+LTPF4UCayFi7DTvGxgvbt5K93i17hM5FVSs0kg0MWiRLoEdD2oiYieRWiaUe5L7yIKZuw1nGTHkCc2Img==
+"@tsed/engines@^6.114.15":
+  version "6.114.15"
+  resolved "https://registry.yarnpkg.com/@tsed/engines/-/engines-6.114.15.tgz#626e2933c636b9890fa75f9d21bdf3dd84a9f125"
+  integrity sha512-FbupPTjJ4TbENTyAGBegOtr/wpr4bb1qe/rFA7OG2xQBcmq4Ap9FC1o5ZMXpAJsx9PE19sxlJVCnPK2OCWKHEg==
   dependencies:
     fs-extra "10.0.1"
     tslib "^2.3.1"
