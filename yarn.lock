@@ -730,10 +730,19 @@
     fs-extra "10.0.1"
     tslib "^2.3.1"
 
-"@tsed/exceptions@6.114.2", "@tsed/exceptions@^6.114.2":
+"@tsed/exceptions@6.114.2":
   version "6.114.2"
   resolved "https://registry.npmjs.org/@tsed/exceptions/-/exceptions-6.114.2.tgz"
   integrity sha512-cCR6XSKVckZQw4aWZ8V2qUmVfHjgB7Nrn4Utc49T2rpdZSgLsLGBz8M0GFwjR72TEraQPRQyGyl+0abvf/MLiQ==
+  dependencies:
+    change-case "4.1.2"
+    statuses ">=2.0.1"
+    tslib "2.3.1"
+
+"@tsed/exceptions@^6.114.15":
+  version "6.114.15"
+  resolved "https://registry.yarnpkg.com/@tsed/exceptions/-/exceptions-6.114.15.tgz#a11c68cca522c3b0fe6461d5c9b2bec5a28879fc"
+  integrity sha512-KsiH4pBVbRTSqlbxHfUWRQBZz0zt1c86ACgYEeGvAzNe1Shvwg7McKnBasTn9KE9MYB0jkju0aPIGtaj6LAAUw==
   dependencies:
     change-case "4.1.2"
     statuses ">=2.0.1"
