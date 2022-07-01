@@ -22,7 +22,7 @@
     "@tsed/core": "^6.114.2",
     "@tsed/di": "^6.114.2",
     "@tsed/engines": "^6.114.2",
-    "@tsed/exceptions": "^6.114.2",
+    "@tsed/exceptions": "^6.116.1",
     "@tsed/json-mapper": "^6.114.2",
     "@tsed/logger": "^6.1.1",
     "@tsed/logger-file": "^6.1.1",
