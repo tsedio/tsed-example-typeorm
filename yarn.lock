@@ -818,12 +818,19 @@
   dependencies:
     tslib "2.3.1"
 
-"@tsed/platform-middlewares@6.114.2", "@tsed/platform-middlewares@^6.114.2":
+"@tsed/platform-middlewares@6.114.2":
   version "6.114.2"
   resolved "https://registry.npmjs.org/@tsed/platform-middlewares/-/platform-middlewares-6.114.2.tgz"
   integrity sha512-YxbqZYGKO3YElw7bS/omLQ24cpsgMSVy214U23l+H8NPWlZS2Tel5Rd0VEELVbXHuk81TeGbGmYYFOmVIc52SQ==
   dependencies:
     tslib "2.3.1"
+
+"@tsed/platform-middlewares@^6.129.0":
+  version "6.129.0"
+  resolved "https://registry.yarnpkg.com/@tsed/platform-middlewares/-/platform-middlewares-6.129.0.tgz#fd15f4d634935d96fbea0a8bac250fb5f4405600"
+  integrity sha512-MRA4srFZSHP7nP+QDR1iDQr2CBoF4N0T9Cfu/wtpAa27l2PnvlnlSHW4nmt5Hx1m9QOR7JC7NPwaXhVN49qFTg==
+  dependencies:
+    tslib "2.4.0"
 
 "@tsed/platform-params@6.114.2", "@tsed/platform-params@^6.114.2":
   version "6.114.2"
@@ -4929,15 +4936,15 @@ tslib@2.3.1:
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.3.1.tgz"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
+tslib@2.4.0, tslib@^2.0.3, tslib@^2.1.0, tslib@^2.3.1, tslib@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz"
+  integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
+
 tslib@^1.8.1:
   version "1.14.1"
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
-
-tslib@^2.0.3, tslib@^2.1.0, tslib@^2.3.1, tslib@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz"
-  integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
 
 tsutils@^3.21.0:
   version "3.21.0"
