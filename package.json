@@ -43,7 +43,7 @@
     "pg": "^7.4.3",
     "sqlite3": "4.2.0",
     "serve-static": "^1.13.1",
-    "typeorm": "0.2.26",
+    "typeorm": "0.2.25",
     "cross-env": "7.0.2",
     "passport": "0.4.1",
     "passport-local": "1.0.0",
